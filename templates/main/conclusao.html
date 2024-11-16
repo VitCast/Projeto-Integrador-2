@@ -1,0 +1,121 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS PROTETORES</title>
+    <link rel="shortcut icon" href="{% static 'assets/sosprotetores.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'styles/mystyle.css' %}">
+ 
+</head>
+<body class="main_bg">
+    <aside class="menu">
+        <section class="main_content menu_content">
+            <h1><img src="{% static 'assets/Sos protetores1.jpeg' %}" alt="logo"></h1>
+            <span style="padding-left: 90px;">SOS PROTETORES</span>
+            <nav>
+                <ul>
+                    <li><a href="#"><img src="{% static 'assets/instagram.png' %}" alt="instagram"></a></li>
+                    <li><a href="#"><img src="{% static 'assets/facebook.png' %}" alt="facebook"></a></li>
+                    <li><a href="#"><img src="{% static 'assets/whatsapp.png' %}" alt="whatsapp"></a></li>
+                </ul>
+            </nav>
+        </section>
+    </aside>
+    <main class="main_content">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section>
+            <div>
+                <div style="display: flex;
+                            align-items: center;">
+                    <img style="border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;" src="{% static 'assets/gato preto com rajado.jpg' %}" alt="gato">
+                    <img src="{% static 'assets/gato branco e marrom.jpg' %}" alt="gato">
+                    <img src="{% static 'assets/gato laranja.jpeg' %}" alt="gato">
+                    <img style="border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;" src="{% static 'assets/gato rajado.jpeg' %}" alt="gato">
+                    <span style="position: absolute;
+                                    color: #ffffff;
+                                    font-size: 55px;
+                                    padding-left: 324px;
+                                    "><strong>ADOTE UM ANIMAL</strong></span>
+                    <span style="position: absolute;
+                    color: #ffffff;
+                    font-size: 30px;
+                    padding-left: 448px;
+                    padding-top: 152px;
+                    "><strong>SEJA UM CUIDADOR</strong></span>
+                </div>
+            </div>
+            <section class="white_block"><h2>ÁREAS</h2>
+                <article>
+                    <a href="{% url 'index' %}">
+                        <p>- HOME -</p>
+                    </a>
+                    <br>
+                    <a href="{% url 'doacao_animais' %}">
+                        <p>- ADOÇÃO -</p>
+                    </a>
+                    <br>
+                    <a href="{% url 'despesas' %}">
+                        <p>- DESPESAS -</p>
+                    </a>
+                    <br>
+                    <a href="{% url 'orcamento' %}">
+                        <p>- ORÇAMENTO -</p>
+                    </a>
+                </article>
+            </section>
+        <section class="white_block">
+            <h2>CONCLUSÃO</h2>
+                <h3 style="text-align: center;
+                            color: #9a8f67;">Encontra-se concluído.</h3>
+                <p>
+                    Meta= castrar 210 animais e atender pelo menos 10 animais em situação emergencial (consultas, medicações, cirurgias e internações).
+                </p>
+                <p>
+                    Resultado= 253 animais castrados e 24 atendimentos emergenciais, sendo que dos 24 atendimentos emergenciais, 10 foram pós-operatório (castrações) e 14 somente atendimentos emergenciais, totalizando 267 animais atendidos no período de 26/10/2022 a 15/12/2022.
+                </p>
+                <br>
+                <p>
+                    Meta= comprar 4.000 kg de rações para distribuir entre 15 protetoras para alimetar 478 animais.
+                </p>
+                <p>
+                    Resultado= 7.060,55 kg de rações (307 sacos de rações mais 10,555 kg de rações de cães), sendo 4.560,55 kg para cães (182 sacos de 25kg e mais 10,555kg) e 2.500 kg para gatos (125 sacos de 20 kg).
+                </p>
+                <br>
+                <p>
+                    Meta= comprar aproximadamente 30 medicamentos para distribuir entre 13 protetoras e a associação.
+                </p>
+                <p>Resultado= Foram adquiridos um total de 23.1 medicamentos e mais 02 caixas de agulhas (25x0,8), 02 caixas de agulhas (40x1,2), 1 caixa de seringa de 3 ml contendo 100 unidades e 07 equipos; será distribuídos 04 (quatro) tipos de kits f(Kit
+                    básicosI e ll e Kit avançados Ill e IV com bolsa de soro para aplicação subcutânea).</p>
+                <br>
+                <p>
+                    Meta= comprar aproximadamente 40 materiais para manuseio de animais para distribuir entre 12 protetoras e a associação.
+                </p>
+                <p>Resultado= foi comprado 39 caixas de transportes (para manuseio de gatos), 40 peitorais com guias (para manuseio de cães), 12 focinheiras (para contenção) e 02 casinhas para cães (tamanho 6 e 7).</p>
+                <br>
+                <h3 style="text-align: center;
+                            color: #9a8f67;">Observações gerais:</h3>
+                <p>
+                    1- Como houve atendimentos emergenciais acima do esperado, remanejamos estas verbas das despesas fixas, manuseios e medicamentos para cobrir estes atendimentos.
+                </p>
+                <p>2- A variação da quantidade de Protetoras beneficiadas conforme os projetos são devidos às necessidades de cada protetora ou por não se enquadrar para a utilização de tais recursos (rateio de rações - acima de 10 animais)</p>
+        </section>
+    </main>
+    <footer class="white_bg">
+        <h2>PROJETO INTEGRADOR</h2>
+        <p>Este site foi desenvolvido através da proposta do Projeto Integrador 2, desenvolver uma aplicação web com framework e Banco de dados, procurando sanar uma necessidade do mundo real. <br>
+        <br>
+        Esta aplicação é para fins 100% pedagógicos <br>
+        Alunos Eixo Computação - Univesp/2024</p>
+
+    </footer>
+</body>
+</html> 

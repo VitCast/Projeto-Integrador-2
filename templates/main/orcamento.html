@@ -1,0 +1,131 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS PROTETORES</title>
+    <link rel="shortcut icon" href="{% static 'assets/sosprotetores.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'styles/mystyle.css' %}">
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            width: 100vh;
+        }
+        table, th, td {
+            border: 1px solid black;
+            
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style> 
+</head>
+<body class="main_bg">
+    <aside class="menu">
+        <section class="main_content menu_content">
+            <h1><img src="{% static 'assets/Sos protetores1.jpeg' %}" alt="logo"></h1>
+            <span style="padding-left: 90px;">SOS PROTETORES</span>
+            <nav>
+                <ul>
+                    <li><a href="#"><img src="{% static 'assets/instagram.png' %}" alt="instagram"></a></li>
+                    <li><a href="#"><img src="{% static 'assets/facebook.png' %}" alt="facebook"></a></li>
+                    <li><a href="#"><img src="{% static 'assets/whatsapp.png' %}" alt="whatsapp"></a></li>
+                </ul>
+            </nav>
+        </section>
+    </aside>
+    <main class="main_content">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section>
+            <div>
+                <div style="display: flex;
+                            align-items: center;">
+                    <img style="border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;" src="{% static 'assets/gato preto com rajado.jpg' %}" alt="gato">
+                    <img src="{% static 'assets/gato branco e marrom.jpg' %}" alt="gato">
+                    <img src="{% static 'assets/gato laranja.jpeg' %}" alt="gato">
+                    <img style="border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;" src="{% static 'assets/gato rajado.jpeg' %}" alt="gato">
+                    <span style="position: absolute;
+                                    color: #ffffff;
+                                    font-size: 55px;
+                                    padding-left: 324px;
+                                    "><strong>ADOTE UM ANIMAL</strong></span>
+                    <span style="position: absolute;
+                    color: #ffffff;
+                    font-size: 30px;
+                    padding-left: 448px;
+                    padding-top: 152px;
+                    "><strong>SEJA UM CUIDADOR</strong></span>
+                </div>
+            </div>
+            <section class="white_block"><h2>ÁREAS</h2>
+                <article>
+                    <a href="{% url 'index' %}">
+                        <p>- HOME -</p>
+                    </a>
+                    <br>
+                    <a href="{% url 'doacao_animais' %}">
+                        <p>- ADOÇAO -</p>
+                    </a>
+                    <br>
+                    <a href="{% url 'despesas' %}">
+                        <p>- DESPESAS -</p>
+                    </a>
+                    <br>
+                    <a href="{% url 'conclusao' %}">
+                        <p>- CONCLUSÃO -</p>
+                    </a>
+                </article>
+            </section>
+        <section class="white_block">
+            <h2>ORÇAMENTO</h2>
+            <section style="display: flex;
+                            justify-items: center;
+                            justify-content: center;">
+             <table>
+                <thead>
+                    <tr>
+                        <th>CATEGORIA</th>
+                        <th>PREVISÃO</th>
+                        <th>DESPESAS</th>
+                        <th>% UTILZADO</th>
+                        <th>ANOTAÇÕES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for orcamento in orcamentos %}
+                    <tr>
+                        <td>{{ orcamento.categoria }}</td>
+                        <td>{{ orcamento.previsao }}</td>
+                        <td>{{ orcamento.despesas }}</td>
+                        <td>{{ orcamento.porct_utilizado }}</td>
+                        <td>{{ orcamento.anotacoes }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            </section>
+    </main>
+    <footer class="white_bg">
+        <h2>PROJETO INTEGRADOR</h2>
+        <p>Este site foi desenvolvido através da proposta do Projeto Integrador 2, desenvolver uma aplicação web com framework e Banco de dados, procurando sanar uma necessidade do mundo real. <br>
+        <br>
+        Esta aplicação é para fins 100% pedagógicos <br>
+        Alunos Eixo Computação - Univesp/2024</p>
+
+    </footer>
+</body>
+</html> 

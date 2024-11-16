@@ -1,0 +1,1 @@
+conda install asgiref distlib django filelock platformdirs python-dotenv sqlparse
